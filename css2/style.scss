@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:wght@100;400&family=Roboto:wght@100;300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+$max-Width: 352px;
+$max-Height: 693px;
+$scale: 0.75;
+$radius: 3em;
+$backGround: rgb(224, 223, 223);
+$gradient1: 
+    180deg,
+    rgb(165, 163, 203),
+    rgb(201, 200, 214);
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div#template {
+      width: $max-Width;
+      height: $max-Height;
+      position: absolute;
+      background-image: url("../images/phone-template.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: scale($scale);
+      z-index: 2;
+    }
+    #wrapper-content {
+        width: 343px;
+        height: 693px;
+        background-color: $backGround;
+        position: relative;
+        z-index: 1;
+        transform: scale(.75);
+        border-radius: $radius;
+        #content {
+            height: 400px;
+            width: 100%;
+            background-image: linear-gradient($gradient1);
+            border-radius: $radius $radius 0 0;
+        }
+    }
+}
