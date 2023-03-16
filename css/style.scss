@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:wght@100;400&family=Roboto:wght@100;300;400&display=swap");
+
+// font-family: 'Black Ops One', cursive;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Roboto', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div#template {
+    width: 352px;
+    height: 736px;
+    position: absolute;
+    background-image: url("../images/phone-template.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(1.15);
+    // transform: scale(0.95);
+    // pointer-events: auto;
+    z-index: 1;
+  }
+
+  section.content-wrapper {
+    position: relative;
+    width: 352px;
+    height: 736px;
+    // transform: scale(0.95);
+  }
+
+  section {
+    width: 352px;
+    height: 736px;
+    position: absolute;
+  }
+  section#landing {
+    background: red;
+    display: none;
+  }
+  section#page1 {
+    background: rgb(224, 223, 223);
+    // display:none;
+    div#content {
+      position: relative;
+      height: 170px;
+      top: -32px;
+      background-image: linear-gradient(
+        180deg,
+        rgb(165, 163, 203),
+        rgb(201, 200, 214)
+      );
+      div#top-section {
+        position: relative;
+        top: 16px;
+        padding: 1.5em;
+        width: 100%;
+        overflow: hidden;
+        p:nth-child(1) {
+          font-size: 1.75em;
+          letter-spacing: 2px;
+        }
+        p:nth-child(2) {
+          font-size: 2em;
+          text-transform: uppercase;
+          margin-top: 0.15em;
+        }
+        h4 {
+          font-weight: 800;
+          margin-top: 0.25em;
+        }
+      }
+      div#checking,
+      div#savings {
+        position: relative;
+        background-color: #fff;
+        height: 120px;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 1em;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+        h3 {
+          text-transform: uppercase;
+          font-weight: 800;
+          letter-spacing: 1px;
+          font-size: 1em;
+        }
+        p:nth-child(2) {
+          font-size: 1.75em;
+          letter-spacing: 2px;
+        }
+        p:nth-child(3) {
+          font-size: 0.75em;
+          letter-spacing: 2px;
+        }
+      }
+      #checking {
+        top: 8px;
+      }
+      div#savings {
+        top: 24px;
+      }
+      div#account {
+        position: relative;
+        top: 24px;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: auto;
+        button {
+          position: relative;
+          z-index: 2;
+          padding: 0.75em 1.5em;
+          font-weight: 800;
+          font-size: 1.15em;
+          cursor: pointer;
+          border-radius: 24px;
+          border: 0.05px solid black;
+          background-color: transparent;
+          transition: all 200ms linear;
+        }
+        button:hover {
+          background-image: linear-gradient(
+            0deg,
+            rgb(165, 163, 203),
+            rgb(201, 200, 214)
+          );
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+      #deal {
+        // margin: 0.5em 0 0 2em;
+        p {
+          margin: 0.5em 0 0 2em;
+          font-weight: 800;
+          img#offer {
+            width: 1.2em;
+            margin-left: 1em;
+          }
+        }
+        div#deal-icons {
+          margin-top: 1em;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          img {
+            width: 30%;
+          }
+        }
+      }
+      div#bottom-content {
+        height: 120px;
+        background-color: white;
+        div{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.25em;
+        padding-top: 1em;
+        img {
+          width: 13%;
+        }
+      }
+        
+      }
+    }
+  }
+  section#page2 {
+    // background: blue;
+    display: none;
+    background: rgb(224, 223, 223);
+    div#content {
+      position: relative;
+      height: 170px;
+      top: -32px;
+      background-image: linear-gradient(
+        180deg,
+        rgb(165, 163, 203),
+        rgb(201, 200, 214)
+      );
+    }
+  }
+}
