@@ -159,6 +159,46 @@ $white: #FFF;
     }
   }
  ////////welcome content ends here
+ #checking-1{//use css grid to fix, also add fixed width and height
+     position: absolute;
+     z-index: 3;
+     top: 100px;
+     right: 290px;
+     height: 100px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     h3 {
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 1px;
+        font-size: 1em;
+        // margin-right: 2em;
+      }
+      p:nth-child(2) {
+        font-size: 1.75em;
+        letter-spacing: 2px;
+      }
+      p:nth-child(3) {
+        font-size: 0.75em;
+        letter-spacing: 2px;
+      }
+      img#exclamation {
+        width: 20px;
+        position: relative;
+        top: -1.25em;
+        left: 130px;
+      }
+      img#left {
+        width: 30px;
+        position: relative;
+        right: 85px;
+        top: -70px;
+      }
+      img#left:hover {
+
+      }
+ }
 #checking-data {
     background-color: $white;
     width: 234px;

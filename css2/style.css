@@ -218,6 +218,55 @@
   margin-top: 0.5em;
 }
 
+.container #checking-1 {
+  position: absolute;
+  z-index: 3;
+  top: 100px;
+  right: 290px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container #checking-1 h3 {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 1em;
+}
+
+.container #checking-1 p:nth-child(2) {
+  font-size: 1.75em;
+  letter-spacing: 2px;
+}
+
+.container #checking-1 p:nth-child(3) {
+  font-size: 0.75em;
+  letter-spacing: 2px;
+}
+
+.container #checking-1 img#exclamation {
+  width: 20px;
+  position: relative;
+  top: -1.25em;
+  left: 130px;
+}
+
+.container #checking-1 img#left {
+  width: 30px;
+  position: relative;
+  right: 85px;
+  top: -70px;
+}
+
 .container #checking-data {
   background-color: #FFF;
   width: 234px;
