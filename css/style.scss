@@ -64,33 +64,33 @@
         padding: 1.5em;
         width: 100%;
         overflow: hidden;
-              div#savings {
-        position: relative;
-        background-color: #fff;
-        height: 120px;
-        width: 90%;
-        margin: 0 auto;
-        border-radius: 1em;
-        padding: 1em;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-        h3 {
-          text-transform: uppercase;
-          font-weight: 800;
-          letter-spacing: 1px;
-          font-size: 1em;
+        div#savings {
+          position: relative;
+          background-color: #fff;
+          height: 120px;
+          width: 90%;
+          margin: 0 auto;
+          border-radius: 1em;
+          padding: 1em;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+          h3 {
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 1px;
+            font-size: 1em;
+          }
+          p:nth-child(2) {
+            font-size: 1.75em;
+            letter-spacing: 2px;
+          }
+          p:nth-child(3) {
+            font-size: 0.75em;
+            letter-spacing: 2px;
+          }
         }
-        p:nth-child(2) {
-          font-size: 1.75em;
-          letter-spacing: 2px;
-        }
-        p:nth-child(3) {
-          font-size: 0.75em;
-          letter-spacing: 2px;
-        }
-      }
         p:nth-child(1) {
           font-size: 1.75em;
           letter-spacing: 2px;
@@ -133,8 +133,7 @@
           letter-spacing: 2px;
         }
       }
-      div#checking-1
- {
+      div#checking-1 {
         position: relative;
         top: 1em;
         left: 180px;
@@ -187,7 +186,7 @@
             border-radius: 1em 1em 0 0;
           }
           #checking-data-divs-5 {
-            border-radius: 0 0 1em 1em ;
+            border-radius: 0 0 1em 1em;
           }
         }
       }
@@ -250,16 +249,15 @@
       div#bottom-content {
         height: 120px;
         background-color: white;
-        div{
-        display: flex;
-        justify-content: space-between;
-        padding: 0 1.25em;
-        padding-top: 1em;
-        img {
-          width: 13%;
+        div {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 1.25em;
+          padding-top: 1em;
+          img {
+            width: 13%;
+          }
         }
-      }
-        
       }
     }
   }

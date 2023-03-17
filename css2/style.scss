@@ -8,42 +8,74 @@
 }
 $max-Width: 352px;
 $max-Height: 693px;
-$scale: 0.75;
-$radius: 3em;
+$scale: 0.85;
+$radius1: 3.5em;
+$radius2: 1em;
 $backGround: rgb(224, 223, 223);
-$gradient1: 
-    180deg,
-    rgb(165, 163, 203),
-    rgb(201, 200, 214);
+$gradient1: 180deg, rgb(165, 163, 203), rgb(201, 200, 214);
 .container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    div#template {
-      width: $max-Width;
-      height: $max-Height;
-      position: absolute;
-      background-image: url("../images/phone-template.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      transform: scale($scale);
-      z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div#template {
+    width: $max-Width;
+    height: $max-Height;
+    position: absolute;
+    background-image: url("../images/phone-template.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale($scale);
+    z-index: 2;
+  }
+  #wrapper-content {
+    margin: 0 auto;
+    width: 343px;
+    height: 693px;
+    background-color: $backGround;
+    position: relative;
+    z-index: 1;
+    transform: scale($scale);
+    border-radius: $radius1;
+    display: grid;
+    grid-template-rows: 2.3fr 6fr 1.5fr;
+    #top-content {
+      width: 100%;
+      background-image: linear-gradient($gradient1);
+      border-radius: $radius1 $radius1 0 0;
+      div{
+          position: relative;
+          top: 3.5em;
+          left: 2.25em;
+      p:nth-child(1) {
+        font-size: 1.5em;
+        letter-spacing: 2px;
+      }
+      p:nth-child(2) {
+        font-size: 1.5em;
+        text-transform: uppercase;
+      }
+      h4 {
+        font-weight: 800;
+      }
     }
-    #wrapper-content {
-        width: 343px;
-        height: 693px;
-        background-color: $backGround;
-        position: relative;
-        z-index: 1;
-        transform: scale(.75);
-        border-radius: $radius;
-        #content {
-            height: 400px;
-            width: 100%;
-            background-image: linear-gradient($gradient1);
-            border-radius: $radius $radius 0 0;
+    }
+    #middle-content {
+        #checking, #savings {
+            height: 120px;
+            background-color: #FFF;
+            width: 78%;
+            border-radius: $radius2;
+            margin: 0 auto;
+            margin-bottom: 1em;
+            position: relative;
+            top: -1em;
         }
     }
+    #bottom-content {
+      background: green;
+      border-radius: 0 0 $radius1 $radius1;
+    }
+  }
 }

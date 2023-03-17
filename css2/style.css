@@ -29,27 +29,67 @@
   background-image: url("../images/phone-template.png");
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-transform: scale(0.75);
-          transform: scale(0.75);
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
   z-index: 2;
 }
 
 .container #wrapper-content {
+  margin: 0 auto;
   width: 343px;
   height: 693px;
   background-color: #e0dfdf;
   position: relative;
   z-index: 1;
-  -webkit-transform: scale(0.75);
-          transform: scale(0.75);
-  border-radius: 3em;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  border-radius: 3.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2.3fr 6fr 1.5fr;
+      grid-template-rows: 2.3fr 6fr 1.5fr;
 }
 
-.container #wrapper-content #content {
-  height: 400px;
+.container #wrapper-content #top-content {
   width: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#a5a3cb), to(#c9c8d6));
   background-image: linear-gradient(180deg, #a5a3cb, #c9c8d6);
-  border-radius: 3em 3em 0 0;
+  border-radius: 3.5em 3.5em 0 0;
+}
+
+.container #wrapper-content #top-content div {
+  position: relative;
+  top: 3.5em;
+  left: 2.25em;
+}
+
+.container #wrapper-content #top-content div p:nth-child(1) {
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+.container #wrapper-content #top-content div p:nth-child(2) {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.container #wrapper-content #top-content div h4 {
+  font-weight: 800;
+}
+
+.container #wrapper-content #middle-content #checking, .container #wrapper-content #middle-content #savings {
+  height: 120px;
+  background-color: #FFF;
+  width: 78%;
+  border-radius: 1em;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  position: relative;
+  top: -1em;
+}
+
+.container #wrapper-content #bottom-content {
+  background: green;
+  border-radius: 0 0 3.5em 3.5em;
 }
 /*# sourceMappingURL=style.css.map */
