@@ -13,6 +13,7 @@ $radius1: 3.5em;
 $radius2: 1em;
 $backGround: rgb(224, 223, 223);
 $gradient1: 180deg, rgb(165, 163, 203), rgb(201, 200, 214);
+$white: #FFF;
 .container {
   width: 100vw;
   height: 100vh;
@@ -54,7 +55,7 @@ $gradient1: 180deg, rgb(165, 163, 203), rgb(201, 200, 214);
       #checking,
       #savings {
         height: 120px;
-        background-color: #fff;
+        background-color: $white;
         border-radius: $radius2;
         margin: 0 auto;
         margin-bottom: 1em;
@@ -158,6 +159,16 @@ $gradient1: 180deg, rgb(165, 163, 203), rgb(201, 200, 214);
     }
   }
  ////////welcome content ends here
+#checking-data {
+    background-color: $white;
+    width: 234px;
+    height: 365px;
+    position: absolute;
+    top:10.5em;
+    z-index: 3;
+    border-radius: $radius2;
+}
+
 
   //////////////backgrounds
   div#template {
@@ -188,7 +199,7 @@ $gradient1: 180deg, rgb(165, 163, 203), rgb(201, 200, 214);
     #bottom-white-background {
       position: relative;
       height: 100px;
-      background: white;
+      background: $white;
       top: 25.8em;
     }
   }

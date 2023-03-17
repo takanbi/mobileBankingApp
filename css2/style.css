@@ -70,7 +70,7 @@
 .container #welcome-main-content #welcome-middle-content #checking,
 .container #welcome-main-content #welcome-middle-content #savings {
   height: 120px;
-  background-color: #fff;
+  background-color: #FFF;
   border-radius: 1em;
   margin: 0 auto;
   margin-bottom: 1em;
@@ -218,6 +218,16 @@
   margin-top: 0.5em;
 }
 
+.container #checking-data {
+  background-color: #FFF;
+  width: 234px;
+  height: 365px;
+  position: absolute;
+  top: 10.5em;
+  z-index: 3;
+  border-radius: 1em;
+}
+
 .container div#template {
   width: 352px;
   height: 693px;
@@ -253,7 +263,7 @@
 .container #wrapper-content #bottom-white-background {
   position: relative;
   height: 100px;
-  background: white;
+  background: #FFF;
   top: 25.8em;
 }
 /*# sourceMappingURL=style.css.map */
