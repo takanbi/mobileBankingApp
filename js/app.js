@@ -1,6 +1,6 @@
 $(function(){
-let welcomeTop = $("#welcome-top-content");
-let welcomeMiddle = $("#welcome-middle-content");
+// let welcomeTop = $("#welcome-top-content");
+// let welcomeMiddle = $("#welcome-middle-content");
 let checking_1 = $("#checking-1");
 let checkingData = $("#checking-data");
 welcomeTop.css("visibility", "hidden");
