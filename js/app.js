@@ -5,6 +5,6 @@ let checking_1 = $("#checking-1");
 let checkingData = $("#checking-data");
 // welcomeTop.css("visibility", "hidden");
 // welcomeMiddle.css("visibility", "hidden");
-// checking_1.css("visibility", "hidden");
-// checkingData.css("visibility", "hidden");
+checking_1.css("visibility", "hidden");
+checkingData.css("visibility", "hidden");
   });
