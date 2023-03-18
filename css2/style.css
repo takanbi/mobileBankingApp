@@ -70,7 +70,7 @@
 .container #welcome-main-content #welcome-middle-content #checking,
 .container #welcome-main-content #welcome-middle-content #savings {
   height: 120px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 1em;
   margin: 0 auto;
   margin-bottom: 1em;
@@ -218,11 +218,29 @@
   margin-top: 0.5em;
 }
 
-.container #checking-1 {
+.container #checking-main-content {
   position: absolute;
   z-index: 3;
-  top: 100px;
-  right: 290px;
+  width: 343px;
+  height: 693px;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container #checking-main-content #checking-1 {
+  position: relative;
+  top: 75px;
+  left: 40px;
   height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,44 +254,53 @@
           justify-content: space-evenly;
 }
 
-.container #checking-1 h3 {
+.container #checking-main-content #checking-1 h3 {
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 1px;
   font-size: 1em;
 }
 
-.container #checking-1 p:nth-child(2) {
+.container #checking-main-content #checking-1 p:nth-child(2) {
   font-size: 1.75em;
   letter-spacing: 2px;
 }
 
-.container #checking-1 p:nth-child(3) {
+.container #checking-main-content #checking-1 p:nth-child(3) {
   font-size: 0.75em;
   letter-spacing: 2px;
 }
 
-.container #checking-1 img#exclamation {
+.container #checking-main-content #checking-1 img#exclamation {
   width: 20px;
   position: relative;
   top: -1.25em;
   left: 130px;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
 }
 
-.container #checking-1 img#left {
+.container #checking-main-content #checking-1 img#left {
   width: 30px;
   position: relative;
-  right: 85px;
+  right: 95px;
   top: -70px;
+  padding: 3px;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.container #checking-main-content #checking-1 img#left:hover {
+  -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container #checking-data {
-  background-color: #FFF;
-  width: 234px;
-  height: 365px;
+  background-color: #fff;
+  width: 275px;
+  height: 420px;
   position: absolute;
-  top: 10.5em;
-  z-index: 3;
+  top: 154px;
   border-radius: 1em;
 }
 
@@ -312,7 +339,7 @@
 .container #wrapper-content #bottom-white-background {
   position: relative;
   height: 100px;
-  background: #FFF;
+  background: #fff;
   top: 25.8em;
 }
 /*# sourceMappingURL=style.css.map */

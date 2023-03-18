@@ -13,7 +13,7 @@ $radius1: 3.5em;
 $radius2: 1em;
 $backGround: rgb(224, 223, 223);
 $gradient1: 180deg, rgb(165, 163, 203), rgb(201, 200, 214);
-$white: #FFF;
+$white: #fff;
 .container {
   width: 100vw;
   height: 100vh;
@@ -158,22 +158,29 @@ $white: #FFF;
       }
     }
   }
- ////////welcome content ends here
- #checking-1{//use css grid to fix, also add fixed width and height
-     position: absolute;
-     z-index: 3;
-     top: 100px;
-     right: 290px;
-     height: 100px;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-evenly;
-     h3 {
+  ////////welcome content ends here
+  #checking-main-content {
+    position: absolute;
+    z-index: 3;
+    width: 343px;
+    height: 693px;
+    transform: scale($scale);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #checking-1 {
+      position: relative;
+      top: 75px;
+      left: 40px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      h3 {
         text-transform: uppercase;
         font-weight: 800;
         letter-spacing: 1px;
         font-size: 1em;
-        // margin-right: 2em;
       }
       p:nth-child(2) {
         font-size: 1.75em;
@@ -188,27 +195,29 @@ $white: #FFF;
         position: relative;
         top: -1.25em;
         left: 130px;
+        transform: scale(0.75);
       }
       img#left {
         width: 30px;
         position: relative;
-        right: 85px;
+        right: 95px;
         top: -70px;
+        padding: 3px;
+        transform: scale(1.25);
       }
       img#left:hover {
-
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
       }
- }
-#checking-data {
+    }
+  }
+  #checking-data {
     background-color: $white;
-    width: 234px;
-    height: 365px;
+    width: 275px;
+    height: 420px;
     position: absolute;
-    top:10.5em;
-    z-index: 3;
+    top: 154px;
     border-radius: $radius2;
-}
-
+  }
 
   //////////////backgrounds
   div#template {
