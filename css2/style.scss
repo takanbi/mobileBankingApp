@@ -17,7 +17,7 @@ $gradient1: 180deg, rgb(165, 163, 203), rgb(201, 200, 214);
 $white: #fff;
 @font-face {
   font-family: HelveticaNeue;
-  src: url(../HelveticaNeue\ Bold.ttf);
+  src: url("../HelveticaNeue-Bold.ttf");
 }
 $HelveticaNeue: HelveticaNeue;
 .container {
@@ -37,11 +37,20 @@ $HelveticaNeue: HelveticaNeue;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    #login-form-section {
+    img#logo {
+        width: 400px;
+        height: auto;
+    }
+    section#login-form-section {
       width: 394px;
       display: flex;
       flex-direction: column;
       height: 100%;
+      input#username, button {
+          display: block;
+        margin: 1em 0;
+        width: 100%;
+      }
     }
   }
   ////////welcome content starts here
