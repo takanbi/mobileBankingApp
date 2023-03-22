@@ -8,6 +8,11 @@
   font-weight: 100;
 }
 
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(../);
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -20,6 +25,32 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.container #login {
+  position: absolute;
+  z-index: 4;
+  width: 343px;
+  height: 693px;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container #login svg text {
+  font: bold;
 }
 
 .container #welcome-main-content {
@@ -302,6 +333,83 @@
   position: absolute;
   top: 154px;
   border-radius: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10fr 10fr 10fr 10fr 10fr 3fr;
+      grid-template-rows: 10fr 10fr 10fr 10fr 10fr 3fr;
+}
+
+.container #checking-data .checking-data-divs {
+  width: 100%;
+  border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container #checking-data .checking-data-divs div:nth-child(1) {
+  padding: 1em;
+}
+
+.container #checking-data .checking-data-divs div:nth-child(1) .clock {
+  width: 2em;
+}
+
+.container #checking-data .checking-data-divs div:nth-child(2) {
+  width: 220px;
+  padding-top: 2em;
+  font-size: 0.5em;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container #checking-data .checking-data-divs div:nth-child(2) span:nth-child(2) {
+  margin-left: auto;
+  display: inline-block;
+}
+
+.container #checking-data .checking-data-divs div:nth-child(3) {
+  position: relative;
+  right: 190px;
+  top: 2em;
+}
+
+.container #checking-data .checking-data-divs div:nth-child(3) h3 {
+  font-weight: 800;
+  font-size: 1.5em;
+  font-size: 0.55em;
+}
+
+.container #checking-data #checking-data-divs-1 {
+  border-radius: 1em 1em 0 0;
+}
+
+.container #checking-data #checking-data-divs-6 {
+  border-radius: 0 0 1em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: red;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.5em;
+  font-weight: bold;
+  position: relative;
+  top: 1em;
+  right: 3em;
+}
+
+.container #checking-data #checking-data-divs-6 #checking-data-divs-6-p {
+  position: relative;
+  right: 100px;
+  width: 100%;
+}
+
+.container #checking-data .checking-data-divs:nth-child(5) {
+  border: none;
 }
 
 .container div#template {
@@ -341,5 +449,15 @@
   height: 100px;
   background: #fff;
   top: 25.8em;
+}
+
+.container #wrapper-content #full-gradient-background {
+  position: absolute;
+  top: 0px;
+  height: 693px;
+  width: 100%;
+  border-radius: 3.5em;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a5a3cb), to(#c9c8d6));
+  background-image: linear-gradient(180deg, #a5a3cb, #c9c8d6);
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 100;
 }
+
 $max-Width: 352px;
 $max-Height: 693px;
 $scale: 0.85;
@@ -14,12 +15,35 @@ $radius2: 1em;
 $backGround: rgb(224, 223, 223);
 $gradient1: 180deg, rgb(165, 163, 203), rgb(201, 200, 214);
 $white: #fff;
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(../HelveticaNeue\ Bold.ttf);
+}
+$HelveticaNeue: HelveticaNeue;
 .container {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  ////////login starts here
+  #login {
+    position: absolute;
+    z-index: 4;
+    width: 343px;
+    height: 693px;
+    transform: scale($scale);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    #login-form-section {
+      width: 394px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
   ////////welcome content starts here
   #welcome-main-content {
     position: absolute;
@@ -217,8 +241,69 @@ $white: #fff;
     position: absolute;
     top: 154px;
     border-radius: $radius2;
-  }
+    display: grid;
+    grid-template-rows: 10fr 10fr 10fr 10fr 10fr 3fr;
+    .checking-data-divs {
+      width: 100%;
+      //   height: 100%;
+      border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+      display: flex;
+      //   display: grid;
+      div:nth-child(1) {
+        padding: 1em;
+        .clock {
+          width: 2em;
+        }
+      }
+      div:nth-child(2) {
+        width: 220px;
+        padding-top: 2em;
+        font-size: 0.5em;
+        font-weight: bold;
+        display: flex;
+        span:nth-child(2) {
+          margin-left: auto;
+          display: inline-block;
+        }
+      }
+      div:nth-child(3) {
+        // width: 200px;
+        position: relative;
+        right: 190px;
+        top: 2em;
 
+        h3 {
+          font-weight: 800;
+          font-size: 1.5em;
+          font-size: 0.55em;
+        }
+      }
+    }
+    #checking-data-divs-1 {
+      border-radius: 1em 1em 0 0;
+    }
+    #checking-data-divs-6 {
+      border-radius: 0 0 1em 1em;
+      display: flex;
+      //   width: 100%;
+      color: red;
+      justify-content: center;
+      font-size: 0.5em;
+      font-weight: bold;
+      position: relative;
+      top: 1em;
+      right: 3em;
+      //   width: 440px;
+      #checking-data-divs-6-p {
+        position: relative;
+        right: 100px;
+        width: 100%;
+      }
+    }
+    .checking-data-divs:nth-child(5) {
+      border: none;
+    }
+  }
   //////////////backgrounds
   div#template {
     width: $max-Width;
@@ -250,6 +335,15 @@ $white: #fff;
       height: 100px;
       background: $white;
       top: 25.8em;
+    }
+    #full-gradient-background {
+      position: absolute;
+      top: 0px;
+      height: 693px;
+      width: 100%;
+      // background-color: red;
+      border-radius: $radius1;
+      background-image: linear-gradient($gradient1);
     }
   }
 }
