@@ -124,11 +124,13 @@ $HelveticaNeue: HelveticaNeue;
         margin: 0 auto;
         margin-bottom: 1em;
         position: relative;
+        z-index: 5;
         padding: 1em;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
         h3 {
           text-transform: uppercase;
           font-weight: 800;

@@ -163,6 +163,7 @@
   margin: 0 auto;
   margin-bottom: 1em;
   position: relative;
+  z-index: 5;
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,6 +177,7 @@
           justify-content: space-evenly;
   -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .container #welcome-main-content #welcome-middle-content #checking h3,
