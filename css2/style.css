@@ -29,7 +29,7 @@
 
 .container #login {
   position: absolute;
-  z-index: 4;
+  z-index: 5;
   width: 343px;
   height: 693px;
   -webkit-transform: scale(0.85);
@@ -84,6 +84,7 @@
 
 .container #login section#login-form-section input#username:focus, .container #login section#login-form-section input#password:focus {
   background-color: #CCC5A3;
+  background-color: #FCF4CA;
   border: none;
   outline: 0;
 }
@@ -112,7 +113,7 @@
 
 .container #welcome-main-content {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   width: 343px;
   height: 693px;
   -webkit-transform: scale(0.85);
@@ -310,7 +311,7 @@
 
 .container #checking-main-content {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   width: 343px;
   height: 693px;
   -webkit-transform: scale(0.85);
@@ -378,6 +379,8 @@
   padding: 3px;
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
+  cursor: pointer;
+  border-radius: 50%;
 }
 
 .container #checking-main-content #checking-1 img#left:hover {

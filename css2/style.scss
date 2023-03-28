@@ -29,7 +29,7 @@ $HelveticaNeue: HelveticaNeue;
   ////////login starts here
   #login {
     position: absolute;
-    z-index: 4;
+    z-index: 5;
     width: 343px;
     height: 693px;
     transform: scale($scale);
@@ -62,6 +62,7 @@ $HelveticaNeue: HelveticaNeue;
       }
       input#username:focus, input#password:focus {
         background-color:#CCC5A3;
+        background-color:#FCF4CA;
         border: none;
         outline: 0;
       }
@@ -87,7 +88,7 @@ $HelveticaNeue: HelveticaNeue;
   ////////welcome content starts here
   #welcome-main-content {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     width: 343px;
     height: 693px;
     transform: scale($scale);
@@ -227,7 +228,7 @@ $HelveticaNeue: HelveticaNeue;
   ////////welcome content ends here
   #checking-main-content {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     width: 343px;
     height: 693px;
     transform: scale($scale);
@@ -270,6 +271,8 @@ $HelveticaNeue: HelveticaNeue;
         top: -70px;
         padding: 3px;
         transform: scale(1.25);
+        cursor: pointer;
+        border-radius: 50%;
       }
       img#left:hover {
         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
