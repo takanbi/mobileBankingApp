@@ -29,22 +29,23 @@ $(function () {
   welcomeBottom.css("visibility", "hidden");
   checking_1.css("visibility", "hidden");
   checkingData.css("visibility", "hidden");
-  submit.click(loadWelcome); //{
-//   login.css("visibility", "hidden");
-//   login.css("display", "none");
-//   fullGradient.css("visibility", "hidden");
-//   welcomeTop.css("visibility", "visible");
-//   welcomeMiddle.css("visibility", "visible");
-//   welcomeBottom.css("visibility", "visible");
-//   let tl = gsap.timeline();
-//   tl.from(welcomeTop, {opacity: 0, y: -200, duration: 0.5});
-//   tl.from(welcomeMiddle, {opacity: 0, x: 200, duration: 0.5});
-//   tl.from(welcomeBottom, {opacity: 0, y: 200, duration: 0.5});
-//   });
+  // submit.click(loadWelcome); //{
+  submit.click(function() {
+  login.css("visibility", "hidden");
+  login.css("display", "none");
+  fullGradient.css("visibility", "hidden");
+  welcomeTop.css("visibility", "visible");
+  welcomeMiddle.css("visibility", "visible");
+  welcomeBottom.css("visibility", "visible");
+  let tl = gsap.timeline();
+  tl.from(welcomeTop, {opacity: 0, y: -200, duration: 0.5});
+  tl.from(welcomeMiddle, {opacity: 0, x: 200, duration: 0.5});
+  tl.from(welcomeBottom, {opacity: 0, y: 200, duration: 0.5});
+  });
 //   if((inputUserName == username) && (inputPassword == password)) {
 //     console.log(inputUserName +" "+inputPassword);
 //   }
-  function loadWelcome() {
+  // function loadWelcome() {
     // event.preventDefault();    
 //    function CHECK (event) {
 //     event.preventDefault();
@@ -56,29 +57,35 @@ $(function () {
 //     }
 //    }
 // CHECK();
-        login.css("visibility", "hidden");
+        // login.css("visibility", "hidden");
         // login.css("display", "none");
-        fullGradient.css("visibility", "hidden");
-        welcomeTop.css("visibility", "visible");
-        welcomeMiddle.css("visibility", "visible");
-        welcomeBottom.css("visibility", "visible");
-        welcomeMain.css("z-index", "5");
-        let tl = gsap.timeline();
-        tl.from(welcomeTop, { opacity: 0, y: -200, duration: 0.5 });
-        tl.from(welcomeMiddle, { opacity: 0, x: 200, duration: 0.5 });
-        tl.from(welcomeBottom, { opacity: 0, y: 200, duration: 0.5 });
+        // fullGradient.css("visibility", "hidden");
+        // welcomeTop.css("visibility", "visible");
+        // welcomeMiddle.css("visibility", "visible");
+        // welcomeBottom.css("visibility", "visible");
+        // welcomeMain.css("z-index", "5");
+        // let tl = gsap.timeline();
+        // tl.from(welcomeTop, { opacity: 0, y: -200, duration: 0.5 });
+        // tl.from(welcomeMiddle, { opacity: 0, x: 200, duration: 0.5 });
+        // tl.from(welcomeBottom, { opacity: 0, y: 200, duration: 0.5 });
     
  // }
-  checking.click(() => {
-    welcomeTop.css("visibility", "hidden");
-    welcomeMiddle.css("visibility", "hidden");
-    checking_1.css("visibility", "visible");
-    checkingData.css("visibility", "visible");
-    welcomeMain.css("z-index", "4");
-  });
-  leftChevron.click(() => {
-    loadWelcome();
-    checking_1.css("visibility", "hidden");
-    checkingData.css("visibility", "hidden");
-  });
+
+
+  // checking.click(() => {
+  //   welcomeTop.css("visibility", "hidden");
+  //   welcomeMiddle.css("visibility", "hidden");
+  //   checking_1.css("visibility", "visible");
+  //   checkingData.css("visibility", "visible");
+  //   welcomeMain.css("z-index", "4");
+  // });
+
+
+  // leftChevron.click(() => {
+  //   // loadWelcome();
+  //   checking_1.css("visibility", "hidden");
+  //   checkingData.css("visibility", "hidden");
+  // });
+
+
 });

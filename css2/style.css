@@ -2,8 +2,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
 }
@@ -16,15 +15,9 @@
 .container {
   width: 100vw;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .container #login {
@@ -32,21 +25,11 @@
   z-index: 5;
   width: 343px;
   height: 693px;
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transform: scale(0.85);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container #login img#logo {
@@ -56,13 +39,8 @@
 
 .container #login section#login-form-section {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .container #login section#login-form-section input#username, .container #login section#login-form-section input#password, .container #login section#login-form-section #submit {
@@ -73,8 +51,7 @@
 }
 
 .container #login section#login-form-section input#username, .container #login section#login-form-section input#password {
-  -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 1em;
   padding: 1em;
   border: none;
@@ -97,18 +74,15 @@
   border-radius: 24px;
   border: 0.05px solid black;
   background-color: transparent;
-  -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
   width: 50%;
   background-color: transparent;
-  -webkit-transition: background-color 200ms ease-in;
   transition: background-color 200ms ease-in;
 }
 
 .container #login section#login-form-section #submit:active {
   background-color: #fff;
-  -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container #welcome-main-content {
@@ -116,18 +90,10 @@
   z-index: 4;
   width: 343px;
   height: 693px;
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transform: scale(0.85);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container #welcome-main-content #welcome-top-content {
@@ -166,18 +132,10 @@
   position: relative;
   z-index: 5;
   padding: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
@@ -207,15 +165,9 @@
   position: relative;
   top: -0.25em;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   pointer-events: auto;
   color: rgba(0, 0, 0, 0.6);
 }
@@ -228,13 +180,11 @@
   border-radius: 24px;
   border: 0.05px solid black;
   background-color: transparent;
-  -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
   text-decoration: none;
 }
 
 .container #welcome-main-content #welcome-middle-content #account #account-button:hover {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#a5a3cb), to(#c9c8d6)) !important;
   background-image: linear-gradient(0deg, #a5a3cb, #c9c8d6) !important;
 }
 
@@ -256,12 +206,8 @@
 }
 
 .container #welcome-main-content #welcome-middle-content #deal div#deal-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -277,26 +223,15 @@
 }
 
 .container #welcome-main-content #welcome-bottom-content div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .container #welcome-main-content #welcome-bottom-content div div {
   margin-top: 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container #welcome-main-content #welcome-bottom-content div div img {
@@ -314,18 +249,10 @@
   z-index: 4;
   width: 343px;
   height: 693px;
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transform: scale(0.85);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container #checking-main-content #checking-1 {
@@ -333,16 +260,9 @@
   top: 75px;
   left: 40px;
   height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .container #checking-main-content #checking-1 h3 {
@@ -367,8 +287,7 @@
   position: relative;
   top: -1.25em;
   left: 130px;
-  -webkit-transform: scale(0.75);
-          transform: scale(0.75);
+  transform: scale(0.75);
 }
 
 .container #checking-main-content #checking-1 img#left {
@@ -377,15 +296,13 @@
   right: 95px;
   top: -70px;
   padding: 3px;
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
+  transform: scale(1.25);
   cursor: pointer;
   border-radius: 50%;
 }
 
 .container #checking-main-content #checking-1 img#left:hover {
-  -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container #checking-data {
@@ -395,17 +312,13 @@
   position: absolute;
   top: 154px;
   border-radius: 1em;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 10fr 10fr 10fr 10fr 10fr 3fr;
-      grid-template-rows: 10fr 10fr 10fr 10fr 10fr 3fr;
+  grid-template-rows: 10fr 10fr 10fr 10fr 10fr 3fr;
 }
 
 .container #checking-data .checking-data-divs {
   width: 100%;
   border-bottom: 1px solid rgba(193, 193, 193, 0.3);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -422,8 +335,6 @@
   padding-top: 2em;
   font-size: 0.5em;
   font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -450,13 +361,9 @@
 
 .container #checking-data #checking-data-divs-6 {
   border-radius: 0 0 1em 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: red;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-size: 0.5em;
   font-weight: bold;
   position: relative;
@@ -481,8 +388,7 @@
   background-image: url("../images/phone-template.png");
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
+  transform: scale(0.85);
   z-index: 2;
 }
 
@@ -493,14 +399,12 @@
   background-color: #e0dfdf;
   position: relative;
   z-index: 1;
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
+  transform: scale(0.85);
   border-radius: 3.5em;
 }
 
 .container #wrapper-content #top-background-gradient {
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#a5a3cb), to(#c9c8d6));
   background-image: linear-gradient(180deg, #a5a3cb, #c9c8d6);
   border-radius: 3.5em 3.5em 0 0;
   height: 170px;
@@ -519,7 +423,6 @@
   height: 693px;
   width: 100%;
   border-radius: 3.5em;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#a5a3cb), to(#c9c8d6));
   background-image: linear-gradient(180deg, #a5a3cb, #c9c8d6);
 }
 /*# sourceMappingURL=style.css.map */
