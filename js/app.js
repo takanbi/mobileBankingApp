@@ -13,7 +13,7 @@ $(function () {
   const username = "aaa";
   const password = "bbb";
   let submit = $("#submit");
-  let inputUserName = $("#username");
+  let inputUserName = $("#username").val().trim();
   let inputPassword = $("#password");
 //   let inputUserName = $("#username").val();
 //   let inputPassword = $("#password").val();
@@ -31,17 +31,42 @@ $(function () {
   checkingData.css("visibility", "hidden");
   // submit.click(loadWelcome); //{
   submit.click(function() {
+      
+      
   login.css("visibility", "hidden");
   login.css("display", "none");
   fullGradient.css("visibility", "hidden");
   welcomeTop.css("visibility", "visible");
   welcomeMiddle.css("visibility", "visible");
   welcomeBottom.css("visibility", "visible");
+  welcomeMain.css("z-index", "5");
   let tl = gsap.timeline();
   tl.from(welcomeTop, {opacity: 0, y: -200, duration: 0.5});
   tl.from(welcomeMiddle, {opacity: 0, x: 200, duration: 0.5});
   tl.from(welcomeBottom, {opacity: 0, y: 200, duration: 0.5});
+      
   });
+
+ checking.click(function(){
+      welcomeTop.css("visibility", "hidden");
+      welcomeMiddle.css("visibility", "hidden");
+      checking_1.css("visibility", "visible");
+      checkingData.css("visibility", "visible");
+      welcomeMain.css("z-index", "4");
+ });
+ leftChevron.click(function(){
+  welcomeTop.css("visibility", "visible");
+  welcomeMiddle.css("visibility", "visible");
+  checking_1.css("visibility", "hidden");
+  checkingData.css("visibility", "hidden");
+  welcomeMain.css("z-index", "5");
+ });
+
+
+
+
+
+
 //   if((inputUserName == username) && (inputPassword == password)) {
 //     console.log(inputUserName +" "+inputPassword);
 //   }
