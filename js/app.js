@@ -1,4 +1,6 @@
 $(function () {
+  // let wrapperContent = $("#wrapper-content");
+  // wrapperContent.css("visibility","hidden");
   let login = $("#login");
   let fullGradient = $("#full-gradient-background");
   let welcomeTop = $("#welcome-top-content");
@@ -30,9 +32,7 @@ $(function () {
   checking_1.css("visibility", "hidden");
   checkingData.css("visibility", "hidden");
   // submit.click(loadWelcome); //{
-  submit.click(function() {
-      
-      
+  submit.click(function() {  
   login.css("visibility", "hidden");
   login.css("display", "none");
   fullGradient.css("visibility", "hidden");
@@ -40,6 +40,7 @@ $(function () {
   welcomeMiddle.css("visibility", "visible");
   welcomeBottom.css("visibility", "visible");
   welcomeMain.css("z-index", "5");
+  // wrapperContent.css("visibility","visible");
   let tl = gsap.timeline();
   tl.from(welcomeTop, {opacity: 0, y: -200, duration: 0.5});
   tl.from(welcomeMiddle, {opacity: 0, x: 200, duration: 0.5});
