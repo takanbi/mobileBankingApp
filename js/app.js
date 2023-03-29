@@ -10,13 +10,15 @@ $(function () {
   let checkingData = $("#checking-data");
   let checking = $("#checking");
   let savings = $("#savings");
-  // const username = "tunjiakanbi@gmail.com";
-  // const password = "P@$$w0rd";
-  const username = "aaa";
-  const password = "bbb";
+  const username = "tunjiakanbi@gmail.com";
+  const password = "P@$$w0rd";
+  // const username = "aaa";
+  // const password = "bbb";
   let submit = $("#submit");
-  let inputUserName = $("#username").val().trim();
-  let inputPassword = $("#password");
+  let inputUserName;
+  let inputPassword;
+  // let inputUserName = $("#username").val().trim();
+  // let inputPassword = $("#password");
 //   let inputUserName = $("#username").val();
 //   let inputPassword = $("#password").val();
   let leftChevron = $("#left");
@@ -32,7 +34,12 @@ $(function () {
   checking_1.css("visibility", "hidden");
   checkingData.css("visibility", "hidden");
   // submit.click(loadWelcome); //{
-  submit.click(function() {  
+  submit.click(loadWelcome);
+function loadWelcome() {
+  getUserName();
+  getPassword();
+if((inputUserName === username) && (inputPassword === password)) {
+
   login.css("visibility", "hidden");
   login.css("display", "none");
   fullGradient.css("visibility", "hidden");
@@ -45,25 +52,43 @@ $(function () {
   tl.from(welcomeTop, {opacity: 0, y: -200, duration: 0.5});
   tl.from(welcomeMiddle, {opacity: 0, x: 200, duration: 0.5});
   tl.from(welcomeBottom, {opacity: 0, y: 200, duration: 0.5});
-      
-  });
 
- checking.click(function(){
-      welcomeTop.css("visibility", "hidden");
-      welcomeMiddle.css("visibility", "hidden");
-      checking_1.css("visibility", "visible");
-      checkingData.css("visibility", "visible");
-      welcomeMain.css("z-index", "4");
- });
- leftChevron.click(function(){
+}
+}
+ checking.click(loadChecking);
+ function loadChecking() {
+  welcomeTop.css("visibility", "hidden");
+  welcomeMiddle.css("visibility", "hidden");
+  checking_1.css("visibility", "visible");
+  checkingData.css("visibility", "visible");
+  welcomeMain.css("z-index", "4");
+ }
+ leftChevron.click(reLoadWelcome);
+
+ function reLoadWelcome() {
   welcomeTop.css("visibility", "visible");
   welcomeMiddle.css("visibility", "visible");
   checking_1.css("visibility", "hidden");
   checkingData.css("visibility", "hidden");
   welcomeMain.css("z-index", "5");
- });
+ }
 
-
+function getUserName() {
+$("#username").keyup(function() {
+  let userNameValue = $(this).val();
+  console.log(userNameValue);
+  inputUserName = userNameValue;
+})
+.keyup();
+}
+function getPassword() {
+$("#password").keyup(function() {
+  let passwordValue = $(this).val();
+  console.log(passwordValue);
+  inputPassword = passwordValue;
+})
+.keyup();
+}
 
 
 
