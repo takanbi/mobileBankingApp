@@ -13,7 +13,10 @@ $scale: 0.85;
 $radius1: 3.5em;
 $radius2: 1em;
 $backGround: rgb(224, 223, 223);
-$gradient1: 180deg, rgb(165, 163, 203), rgb(201, 200, 214);
+// $gradient1: 180deg, rgb(165, 163, 203), rgb(201, 200, 214);
+
+$gradient1: 225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%;
+
 $fW800: 800;
 $white: #fff;
 $boxShadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
