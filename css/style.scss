@@ -15,7 +15,10 @@ $radius2: 1em;
 $backGround: rgb(224, 223, 223);
 // $gradient1: 180deg, rgb(165, 163, 203), rgb(201, 200, 214);
 
-$gradient1: 225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%;
+// $gradient1: 225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%;
+$gradient1: 180deg, rgb(165, 163, 203), rgb(201, 200, 216);
+$gradient2: 225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%;
+$gradient3: 19deg, #21d4fd 0%, #b721ff 100%;
 
 $fW800: 800;
 $white: #fff;
@@ -366,7 +369,7 @@ $HelveticaNeue: HelveticaNeue;
     border-radius: $radius1;
     div#top-background-gradient {
       position: relative;
-      background-image: linear-gradient($gradient1);
+      background-image: linear-gradient($gradient3);
       border-radius: $radius1 $radius1 0 0;
       height: 170px;
     }
@@ -382,7 +385,7 @@ $HelveticaNeue: HelveticaNeue;
       height: $max-Height;
       width: 100%;
       border-radius: $radius1;
-      background-image: linear-gradient($gradient1);
+      background-image: linear-gradient($gradient3);
     }
   }
 }
