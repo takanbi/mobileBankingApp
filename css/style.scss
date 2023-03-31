@@ -271,6 +271,7 @@ $HelveticaNeue: HelveticaNeue;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+      color: $white;
       h3 {
         text-transform: uppercase;
         font-weight: $fW800;
@@ -302,6 +303,7 @@ $HelveticaNeue: HelveticaNeue;
         cursor: pointer;
         border-radius: 50%;
         transition: all 200ms linear;
+        background: $white;
       }
       img#left:hover {
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
