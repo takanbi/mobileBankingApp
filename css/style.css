@@ -76,14 +76,20 @@
   cursor: pointer;
   border-radius: 24px;
   border: 0.05px solid #000;
-  background-color: transparent;
+  background: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
   width: 50%;
   transition: all 200ms ease-in;
+  color: #fff;
 }
 
 .container section#login section#login-form-section button#submit:active {
   background-color: #fff;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container section#login section#login-form-section button#submit:hover {
+  background: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
 }
 
 .container section#welcome-main-content {
@@ -141,6 +147,7 @@
   justify-content: space-evenly;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: all 200ms linear;
 }
 
 .container section#welcome-main-content div#welcome-middle-content #checking h3,
@@ -165,6 +172,11 @@
   line-height: 2em;
 }
 
+.container section#welcome-main-content div#welcome-middle-content #checking:hover,
+.container section#welcome-main-content div#welcome-middle-content #savings:hover {
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
 .container section#welcome-main-content div#welcome-middle-content div#account {
   position: relative;
   top: -0.25em;
@@ -183,15 +195,15 @@
   cursor: pointer;
   border-radius: 24px;
   border: 0.05px solid #000;
-  background-color: transparent;
+  background: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
   text-decoration: none;
-  color: #000;
+  color: #fff;
   transition: all 200ms linear;
 }
 
 .container section#welcome-main-content div#welcome-middle-content div#account a#account-button:hover {
-  background-image: linear-gradient(180deg, #a5a3cb, #c9c8d8);
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
 }
 
 .container section#welcome-main-content div#welcome-middle-content div#deal {
@@ -219,6 +231,11 @@
 
 .container section#welcome-main-content div#welcome-middle-content div#deal div#deal-icons img {
   width: 30%;
+  transition: all 200ms linear;
+}
+
+.container section#welcome-main-content div#welcome-middle-content div#deal div#deal-icons img:hover {
+  transform: scale(1.1);
 }
 
 .container section#welcome-main-content div#welcome-bottom-content {
@@ -242,12 +259,17 @@
 
 .container section#welcome-main-content div#welcome-bottom-content div div img {
   width: 50%;
+  transition: all 200ms linear;
 }
 
 .container section#welcome-main-content div#welcome-bottom-content div div span {
   font-size: 0.75em;
   font-weight: bold;
   margin-top: 0.5em;
+}
+
+.container section#welcome-main-content div#welcome-bottom-content div div:hover img {
+  transform: scale(1.2);
 }
 
 .container div#checking-main-content {

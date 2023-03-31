@@ -84,13 +84,18 @@ $HelveticaNeue: HelveticaNeue;
         cursor: pointer;
         border-radius: 24px;
         border: 0.05px solid #000;
-        background-color: transparent;
+        background: linear-gradient($gradient2);
         width: 50%;
         transition: all 200ms ease-in;
+        color: $white;
       }
       button#submit:active {
         background-color: $white;
         box-shadow: $boxShadow;
+      }
+      button#submit:hover {
+        background: linear-gradient($gradient3);
+        box-shadow: 6px 6px 10px rgba(0,0,0,0.5);
       }
     }
   }
@@ -144,6 +149,7 @@ $HelveticaNeue: HelveticaNeue;
         justify-content: space-evenly;
         box-shadow: $boxShadow;
         cursor: pointer;
+        transition: all 200ms linear;
         h3 {
           text-transform: uppercase;
           font-weight: $fW800;
@@ -161,6 +167,10 @@ $HelveticaNeue: HelveticaNeue;
           line-height: 2em;
         }
       }
+      #checking:hover,
+      #savings:hover {
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+      }
       div#account {
         position: relative;
         top: -0.25em;
@@ -177,14 +187,14 @@ $HelveticaNeue: HelveticaNeue;
           cursor: pointer;
           border-radius: 24px;
           border: 0.05px solid #000;
-          background-color: transparent;
+          background: linear-gradient($gradient2);
           text-decoration: none;
-          color: #000;
+          color: $white;
           transition: all 200ms linear;
         }
         a#account-button:hover {
-          background-image: linear-gradient($gradient1);
-          box-shadow: $boxShadow;
+          background-image: linear-gradient($gradient3);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
         }
       }
       div#deal {
@@ -206,6 +216,10 @@ $HelveticaNeue: HelveticaNeue;
           width: 100%;
           img {
             width: 30%;
+            transition: all 200ms linear;
+          }
+          img:hover {
+            transform: scale(1.1);
           }
         }
       }
@@ -226,12 +240,16 @@ $HelveticaNeue: HelveticaNeue;
           align-items: center;
           img {
             width: 50%;
+            transition: all 200ms linear;
           }
           span {
             font-size: 0.75em;
             font-weight: bold;
             margin-top: 0.5em;
           }
+        }
+        div:hover img {
+          transform: scale(1.2);
         }
       }
     } //welcome-bottom-content ends
