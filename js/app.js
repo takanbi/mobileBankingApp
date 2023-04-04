@@ -12,6 +12,8 @@ $(function () {
   let checkingData = $("#checking-data");
   let checking = $("#checking");
   let savings = $("#savings");
+  let checkingDataDivs = $(".checking-data-divs");
+  // console.log(checkingDataDivs);
   // const username = "tunjiakanbi@gmail.com";
   // const password = "P@$$w0rd";
   const username = "aaa";
@@ -26,6 +28,13 @@ $(function () {
   let leftChevron = $("#left");
   let welcomeMain = $("#welcome-main-content");
   let userFName = $("#userFName");
+  let transDate = new Array;
+ transDate = $(".transDate");
+  let transAmt = $(".transAmt");
+  let transPurc = $(".transPurc");
+  let transCard = $(".transCard");
+  console.log(transDate);
+  // transDate[0].text("Yes");
   login.css("visibility", "visible");
   fullGradient.css("visibility", "visible");
   // login.css("visibility", "hidden");
@@ -40,9 +49,9 @@ $(function () {
   // submit.click(loadWelcome); //{
   submit.click(loadWelcome);
   function loadWelcome() {
-    getUserName();
-    getPassword();
-    if (inputUserName === username && inputPassword === password) {
+    // getUserName();
+    // getPassword();
+    // if (inputUserName === username && inputPassword === password) {
       getData();
       login.css("visibility", "hidden");
       login.css("display", "none");
@@ -56,9 +65,10 @@ $(function () {
       tl.from(welcomeTop, { opacity: 0, y: -200, duration: 0.5 });
       tl.from(welcomeMiddle, { opacity: 0, x: 200, duration: 0.5 });
       tl.from(welcomeBottom, { opacity: 0, y: 100, duration: 0.5 });
-    }
+    // }
   }
   checking.click(loadChecking);
+
   function loadChecking() {
     welcomeTop.css("visibility", "hidden");
     welcomeMiddle.css("visibility", "hidden");
@@ -66,6 +76,8 @@ $(function () {
     checking_1.css("visibility", "visible");
     checkingData.css("visibility", "visible");
     welcomeMain.css("z-index", "4");
+    let tl = gsap.timeline();
+    tl.from(checkingDataDivs,{ opacity: 0, duration: 2, stagger: 0.3, ease:"power4.out"});
   }
   leftChevron.click(reLoadWelcome);
 
@@ -81,7 +93,7 @@ $(function () {
     $("#username")
       .keyup(function () {
         let userNameValue = $(this).val();
-        console.log(userNameValue);
+        // console.log(userNameValue);
         inputUserName = userNameValue;
       })
       .keyup();
@@ -90,7 +102,7 @@ $(function () {
     $("#password")
       .keyup(function () {
         let passwordValue = $(this).val();
-        console.log(passwordValue);
+        // console.log(passwordValue);
         inputPassword = passwordValue;
       })
       .keyup();
@@ -102,41 +114,41 @@ $(function () {
       type: "GET",
       dataType: "json",
       success: function(data) {
-        // console.log(data[0].userFName);
-        // userFName.text(data[0].userFName);
+        // console.log(data[1][1]); //this will be our counter
+        userFName.text(data[0].userFName);
         $("#yearJoin").text("Customer since " + data[0].yearJoined);
         $("#checkingNum").text(data[0].checkingNum);
         $("#checkingBal").text(data[0].checkingBal);
         $("#savingsNum").text(data[0].savingsNum);
         $("#savingsBal").text(data[0].savingsBal);
+        for(let i = 0; i < data[1].length; i++) {
+          // let test = data[1][i].transactionDate
+          // console.log(data[1][i].transactionDate);
+          transDate.text(data[1][i].transactionDate);
+        }
         // let test = userFName.text().toString();
         // console.log(test);
         
-        let test = data[0].userFName;
-        typeWriter(userFName, test);
-        // let tl = gsap.timeline();
-// tl.to($("#userFName"), {
-//   text: test,
-//   ease: "power1.in",
-//   duration: 1
-// });
-function typeWriter(elem, _text) {
-  let tl = gsap.timeline();
-  tl.to(elem, {
-    text: _text,
-    ease: "power1.in",
-    duration: 1,
+//         let test = data[0].userFName;
+//         typeWriter(userFName, test);
+
+// function typeWriter(elem, _text) {
+//   let tl = gsap.timeline();
+//   tl.to(elem, {
+//     text: _text,
+//     ease: "power1.in",
+//     duration: 1,
     
-  });
-}
+//   });
+// }
       }
       //error: function(jq)
     })
   }
 
-// let tl = gsap.timeline();
-// tl.to($("#userFName"), {
-//   text: userFName.text(data[0].userFName),
-//   ease: "power1.in"
-// })
+  // let tl = gsap.timeline();
+  // tl.to($("#userFName"), {
+  //   text: userFName.text(data[0].userFName),
+  //   ease: "power1.in"
+  // })
 });

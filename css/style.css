@@ -12,12 +12,6 @@
   src: url("../HelveticaNeue-Bold.ttf");
 }
 
-#UNITY_BANK tspan {
-  font-family: HelveticaNeue;
-  font-size: 37px;
-  font-weight: 700;
-}
-
 .container {
   width: 100vw;
   height: 100vh;
@@ -38,9 +32,10 @@
   justify-content: center;
 }
 
-.container section#login img#logo {
-  width: 200px;
-  height: auto;
+.container section#login #UNITY_BANK tspan {
+  font-family: HelveticaNeue;
+  font-size: 37px;
+  font-weight: 700;
 }
 
 .container section#login section#login-form-section {
