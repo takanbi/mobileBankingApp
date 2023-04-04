@@ -28,7 +28,13 @@ $boxShadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   src: url("../HelveticaNeue-Bold.ttf");
 }
 $HelveticaNeue: HelveticaNeue;
-
+#UNITY_BANK {
+  tspan {
+    font-family: $HelveticaNeue;
+    font-size: 37px;
+    font-weight: 700;
+  }
+}
 .container {
   width: 100vw;
   height: 100vh;

@@ -50,7 +50,7 @@ $(function () {
       welcomeTop.css("visibility", "visible");
       welcomeMiddle.css("visibility", "visible");
       welcomeBottom.css("visibility", "visible");
-      welcomeMain.css("z-index", "5");
+      welcomeMain.css("z-index", "5");      
       // wrapperContent.css("visibility","visible");
       let tl = gsap.timeline();
       tl.from(welcomeTop, { opacity: 0, y: -200, duration: 0.5 });
