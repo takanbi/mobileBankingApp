@@ -102,30 +102,41 @@ $(function () {
       type: "GET",
       dataType: "json",
       success: function(data) {
-        console.log(data[0].userFName);
-        userFName.text(data[0].userFName);
+        // console.log(data[0].userFName);
+        // userFName.text(data[0].userFName);
         $("#yearJoin").text("Customer since " + data[0].yearJoined);
         $("#checkingNum").text(data[0].checkingNum);
         $("#checkingBal").text(data[0].checkingBal);
         $("#savingsNum").text(data[0].savingsNum);
         $("#savingsBal").text(data[0].savingsBal);
-        let test = userFName.text().toString();
-        console.log(test);
+        // let test = userFName.text().toString();
+        // console.log(test);
+        
+        let test = data[0].userFName;
         typeWriter(userFName, test);
+        // let tl = gsap.timeline();
+// tl.to($("#userFName"), {
+//   text: test,
+//   ease: "power1.in",
+//   duration: 1
+// });
+function typeWriter(elem, _text) {
+  let tl = gsap.timeline();
+  tl.to(elem, {
+    text: _text,
+    ease: "power1.in",
+    duration: 1,
+    
+  });
+}
       }
       //error: function(jq)
     })
   }
-  function typeWriter(elem, _text) {
-    let tl = gsap.timeline();
-    tl.to(elem, {
-      text: _text,
-      ease: "power1.in",
-      duration: 2,
-      // repeat: 10,
-      // yoyo: true,
-      repeatDelay: 0.4
 
-    });
-  }
+// let tl = gsap.timeline();
+// tl.to($("#userFName"), {
+//   text: userFName.text(data[0].userFName),
+//   ease: "power1.in"
+// })
 });
