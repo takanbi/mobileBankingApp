@@ -49,6 +49,7 @@ $(function () {
   // submit.click(loadWelcome); //{
   submit.click(loadWelcome);
   function loadWelcome() {
+   //!**** remember to add back getUserName and getPassword//*****
     // getUserName();
     // getPassword();
     // if (inputUserName === username && inputPassword === password) {
