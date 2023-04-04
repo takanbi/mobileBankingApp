@@ -227,6 +227,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  cursor: pointer;
 }
 
 .container section#welcome-main-content div#welcome-middle-content div#deal div#deal-icons img {
@@ -255,6 +256,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .container section#welcome-main-content div#welcome-bottom-content div div img {

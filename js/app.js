@@ -1,4 +1,5 @@
 $(function () {
+  gsap.registerPlugin(GSDevTools, TextPlugin);
   // let wrapperContent = $("#wrapper-content");
   // wrapperContent.css("visibility","hidden");
   let login = $("#login");
@@ -6,6 +7,7 @@ $(function () {
   let welcomeTop = $("#welcome-top-content");
   let welcomeMiddle = $("#welcome-middle-content");
   let welcomeBottom = $("#welcome-bottom-content");
+  let checkingMain = $("#checking-main-content");
   let checking_1 = $("#checking-1");
   let checkingData = $("#checking-data");
   let checking = $("#checking");
@@ -31,6 +33,8 @@ $(function () {
   welcomeTop.css("visibility", "hidden");
   welcomeMiddle.css("visibility", "hidden");
   welcomeBottom.css("visibility", "hidden");
+  // checkingMain.css("visibility", "hidden");
+  // checkingMain.css("display", "none");
   checking_1.css("visibility", "hidden");
   checkingData.css("visibility", "hidden");
   // submit.click(loadWelcome); //{
@@ -51,13 +55,14 @@ $(function () {
       let tl = gsap.timeline();
       tl.from(welcomeTop, { opacity: 0, y: -200, duration: 0.5 });
       tl.from(welcomeMiddle, { opacity: 0, x: 200, duration: 0.5 });
-      tl.from(welcomeBottom, { opacity: 0, y: 200, duration: 0.5 });
+      tl.from(welcomeBottom, { opacity: 0, y: 100, duration: 0.5 });
     }
   }
   checking.click(loadChecking);
   function loadChecking() {
     welcomeTop.css("visibility", "hidden");
     welcomeMiddle.css("visibility", "hidden");
+    checkingMain.css("visibility", "visible");
     checking_1.css("visibility", "visible");
     checkingData.css("visibility", "visible");
     welcomeMain.css("z-index", "4");
@@ -104,9 +109,23 @@ $(function () {
         $("#checkingBal").text(data[0].checkingBal);
         $("#savingsNum").text(data[0].savingsNum);
         $("#savingsBal").text(data[0].savingsBal);
-        
+        let test = userFName.text().toString();
+        console.log(test);
+        typeWriter(userFName, test);
       }
       //error: function(jq)
     })
+  }
+  function typeWriter(elem, _text) {
+    let tl = gsap.timeline();
+    tl.to(elem, {
+      text: _text,
+      ease: "power1.in",
+      duration: 2,
+      // repeat: 10,
+      // yoyo: true,
+      repeatDelay: 0.4
+
+    });
   }
 });
