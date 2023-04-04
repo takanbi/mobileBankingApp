@@ -28,8 +28,8 @@ $(function () {
   let leftChevron = $("#left");
   let welcomeMain = $("#welcome-main-content");
   let userFName = $("#userFName");
-  let transDate = new Array;
- transDate = $(".transDate");
+  // let transDate = new Array;
+ let transDate = $(".transDate");
   let transAmt = $(".transAmt");
   let transPurc = $(".transPurc");
   let transCard = $(".transCard");
