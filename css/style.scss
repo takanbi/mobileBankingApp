@@ -2,7 +2,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
 }
@@ -32,20 +33,44 @@ $HelveticaNeue: HelveticaNeue;
 .container {
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   /////////////////////login
   section#login {
     position: absolute;
     z-index: 5;
     width: $min-Width;
     height: $max-Height;
-    transform: scale($scale);
+    -webkit-transform: scale($scale);
+        -ms-transform: scale($scale);
+            transform: scale($scale);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     // img#logo {
     //   width: 200px;
     //   height: auto;
@@ -59,8 +84,15 @@ $HelveticaNeue: HelveticaNeue;
     }
     section#login-form-section {
       width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
       input#username,
       input#password,
       button#submit {
@@ -71,7 +103,8 @@ $HelveticaNeue: HelveticaNeue;
       }
       input#username,
       input#password {
-        box-shadow: $boxShadow;
+        -webkit-box-shadow: $boxShadow;
+                box-shadow: $boxShadow;
         border-radius: $radius2;
         padding: 1em;
         border: none;
@@ -91,18 +124,26 @@ $HelveticaNeue: HelveticaNeue;
         cursor: pointer;
         border-radius: 24px;
         border: 0.05px solid #000;
+        background: -webkit-gradient(linear, left top, left bottom, from($gradient2));
+        background: -o-linear-gradient($gradient2);
         background: linear-gradient($gradient2);
         width: 50%;
+        -webkit-transition: all 200ms ease-in;
+        -o-transition: all 200ms ease-in;
         transition: all 200ms ease-in;
         color: $white;
       }
       button#submit:active {
         background-color: $white;
-        box-shadow: $boxShadow;
+        -webkit-box-shadow: $boxShadow;
+                box-shadow: $boxShadow;
       }
       button#submit:hover {
+        background: -webkit-gradient(linear, left top, left bottom, from($gradient3));
+        background: -o-linear-gradient($gradient3);
         background: linear-gradient($gradient3);
-        box-shadow: 6px 6px 10px rgba(0,0,0,0.5);
+        -webkit-box-shadow: 6px 6px 10px rgba(0,0,0,0.5);
+                box-shadow: 6px 6px 10px rgba(0,0,0,0.5);
       }
     }
   }
@@ -112,10 +153,22 @@ $HelveticaNeue: HelveticaNeue;
     z-index: 4;
     width: $min-Width;
     height: $max-Height;
-    transform: scale($scale);
+    -webkit-transform: scale($scale);
+        -ms-transform: scale($scale);
+            transform: scale($scale);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     div#welcome-top-content {
       position: relative;
       top: 4em;
@@ -151,11 +204,24 @@ $HelveticaNeue: HelveticaNeue;
         position: relative;
         z-index: 5;
         padding: 1em;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        box-shadow: $boxShadow;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: space-evenly;
+        -webkit-justify-content: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+        -webkit-box-shadow: $boxShadow;
+                box-shadow: $boxShadow;
         cursor: pointer;
+        -webkit-transition: all 200ms linear;
+        -o-transition: all 200ms linear;
         transition: all 200ms linear;
         h3 {
           text-transform: uppercase;
@@ -176,15 +242,25 @@ $HelveticaNeue: HelveticaNeue;
       }
       #checking:hover,
       #savings:hover {
-        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+                box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
       }
       div#account {
         position: relative;
         top: -0.25em;
         width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
         pointer-events: auto;
         color: rgba(0, 0, 0, 0.6);
         a#account-button {
@@ -194,14 +270,21 @@ $HelveticaNeue: HelveticaNeue;
           cursor: pointer;
           border-radius: 24px;
           border: 0.05px solid #000;
+          background: -webkit-gradient(linear, left top, left bottom, from($gradient2));
+          background: -o-linear-gradient($gradient2);
           background: linear-gradient($gradient2);
           text-decoration: none;
           color: $white;
+          -webkit-transition: all 200ms linear;
+          -o-transition: all 200ms linear;
           transition: all 200ms linear;
         }
         a#account-button:hover {
+          background-image: -webkit-gradient(linear, left top, left bottom, from($gradient3));
+          background-image: -o-linear-gradient($gradient3);
           background-image: linear-gradient($gradient3);
-          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+          -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+                  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
         }
       }
       div#deal {
@@ -218,16 +301,26 @@ $HelveticaNeue: HelveticaNeue;
           }
         }
         div#deal-icons {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
           width: 100%;
           cursor: pointer;
           img {
             width: 30%;
+            -webkit-transition: all 200ms linear;
+            -o-transition: all 200ms linear;
             transition: all 200ms linear;
           }
           img:hover {
-            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                    transform: scale(1.1);
           }
         }
       }
@@ -239,16 +332,34 @@ $HelveticaNeue: HelveticaNeue;
       height: 120px;
       width: 80%;
       div {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         div {
           margin-top: 0.5em;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
-          flex-direction: column;
-          align-items: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
           cursor: pointer;
           img {
             width: 50%;
+            -webkit-transition: all 200ms linear;
+            -o-transition: all 200ms linear;
             transition: all 200ms linear;
           }
           span {
@@ -258,7 +369,9 @@ $HelveticaNeue: HelveticaNeue;
           }
         }
         div:hover img {
-          transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+              -ms-transform: scale(1.2);
+                  transform: scale(1.2);
         }
       }
     } //welcome-bottom-content ends
@@ -268,18 +381,40 @@ $HelveticaNeue: HelveticaNeue;
     z-index: 4;
     width: $min-Width;
     height: $max-Height;
-    transform: scale($scale);
+    -webkit-transform: scale($scale);
+        -ms-transform: scale($scale);
+            transform: scale($scale);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     div#checking-1 {
       position: relative;
       top: 75px;
       left: 40px;
       height: 100px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: space-evenly;
+      -webkit-justify-content: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
       color: $white;
       h3 {
         text-transform: uppercase;
@@ -300,7 +435,9 @@ $HelveticaNeue: HelveticaNeue;
         position: relative;
         top: -1.25em;
         left: 130px;
-        transform: scale(0.75);
+        -webkit-transform: scale(0.75);
+            -ms-transform: scale(0.75);
+                transform: scale(0.75);
       }
       img#left {
         width: 30px;
@@ -308,14 +445,19 @@ $HelveticaNeue: HelveticaNeue;
         right: 95px;
         top: -70px;
         // padding: 3px;
-        transform: scale(1.25);
+        -webkit-transform: scale(1.25);
+            -ms-transform: scale(1.25);
+                transform: scale(1.25);
         cursor: pointer;
         border-radius: 50%;
+        -webkit-transition: all 200ms linear;
+        -o-transition: all 200ms linear;
         transition: all 200ms linear;
         background: $white;
       }
       img#left:hover {
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
       }
     } //checking-1 ends
     div#checking-data {
@@ -329,6 +471,9 @@ $HelveticaNeue: HelveticaNeue;
       grid-template-rows: 10fr 10fr 10fr 10fr 10fr 3fr;
       div.checking-data-divs {
         width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         border-bottom: 1px solid rgba(193, 193, 193, 0.3);
         div:nth-child(1) {
@@ -339,11 +484,21 @@ $HelveticaNeue: HelveticaNeue;
         }
         div:nth-child(2) {
           width: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
-          flex-direction: column;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
           div:nth-child(1) {
             padding: 0.5em 1em 0em 0em;
             width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
             span:nth-child(1) {
               font-size: 0.5em;
@@ -365,9 +520,18 @@ $HelveticaNeue: HelveticaNeue;
         }
       }
       div.checking-data-divs:nth-child(6) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
         color: red;
         p {
           font-weight: bold;
@@ -375,6 +539,55 @@ $HelveticaNeue: HelveticaNeue;
         }
       }
     } //checking-data ends
+    div#checking-bottom-content {
+      position: relative;
+      top: 490px;
+      height: 120px;
+      width: 80%;
+      div {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        div {
+          margin-top: 0.5em;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          cursor: pointer;
+          img {
+            width: 50%;
+            -webkit-transition: all 200ms linear;
+            -o-transition: all 200ms linear;
+            transition: all 200ms linear;
+          }
+          span {
+            font-size: 0.75em;
+            font-weight: bold;
+            margin-top: 0.5em;
+          }
+        }
+        div:hover img {
+          -webkit-transform: scale(1.2);
+              -ms-transform: scale(1.2);
+                  transform: scale(1.2);
+        }
+      }
+    }
   }
   /////////////////////backgrounds
   div#template {
@@ -384,7 +597,9 @@ $HelveticaNeue: HelveticaNeue;
     background-image: url("../images/phone-template.png");
     background-size: contain;
     background-repeat: no-repeat;
-    transform: scale($scale);
+    -webkit-transform: scale($scale);
+        -ms-transform: scale($scale);
+            transform: scale($scale);
     z-index: 2;
   }
   section#wrapper-content {
@@ -394,10 +609,14 @@ $HelveticaNeue: HelveticaNeue;
     background-color: $backGround;
     position: relative;
     z-index: 1;
-    transform: scale($scale);
+    -webkit-transform: scale($scale);
+        -ms-transform: scale($scale);
+            transform: scale($scale);
     border-radius: $radius1;
     div#top-background-gradient {
       position: relative;
+      background-image: -webkit-gradient(linear, left top, left bottom, from($gradient3));
+      background-image: -o-linear-gradient($gradient3);
       background-image: linear-gradient($gradient3);
       border-radius: $radius1 $radius1 0 0;
       height: 170px;
@@ -414,6 +633,8 @@ $HelveticaNeue: HelveticaNeue;
       height: $max-Height;
       width: 100%;
       border-radius: $radius1;
+      background-image: -webkit-gradient(linear, left top, left bottom, from($gradient3));
+      background-image: -o-linear-gradient($gradient3);
       background-image: linear-gradient($gradient3);
     }
   }

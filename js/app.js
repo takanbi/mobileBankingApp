@@ -13,6 +13,7 @@ $(function () {
   let checking = $("#checking");
   let savings = $("#savings");
   let checkingDataDivs = $(".checking-data-divs");
+  let checkingBottom = $("#checking-bottom-content");
   // console.log(checkingDataDivs);
   // const username = "tunjiakanbi@gmail.com";
   // const password = "P@$$w0rd";
@@ -46,12 +47,13 @@ $(function () {
   // checkingMain.css("display", "none");
   checking_1.css("visibility", "hidden");
   checkingData.css("visibility", "hidden");
+  checkingBottom.css("visibility", "hidden");
   // submit.click(loadWelcome); //{
   submit.click(loadWelcome);
   function loadWelcome() {
    //!**** remember to add back getUserName and getPassword//*****
-    // getUserName();
-    // getPassword();
+    getUserName();
+    getPassword();
     // if (inputUserName === username && inputPassword === password) {
       getData();
       login.css("visibility", "hidden");
@@ -73,10 +75,13 @@ $(function () {
   function loadChecking() {
     welcomeTop.css("visibility", "hidden");
     welcomeMiddle.css("visibility", "hidden");
+    welcomeBottom.css("visibility", "hidden");
     checkingMain.css("visibility", "visible");
     checking_1.css("visibility", "visible");
     checkingData.css("visibility", "visible");
+    checkingBottom.css("visibility", "visible");
     welcomeMain.css("z-index", "4");
+  
     let tl = gsap.timeline();
     tl.from(checkingDataDivs,{ opacity: 0, duration: 2, stagger: 0.3, ease:"power4.out"});
   }
@@ -110,8 +115,10 @@ $(function () {
   }
 
   function getData() {
+    let url = "js/data.json";
     $.ajax({
-      url: "js/data.json",
+      // url: "js/data.json",
+      url: url,
       type: "GET",
       dataType: "json",
       success: function(data) {
@@ -122,11 +129,27 @@ $(function () {
         $("#checkingBal").text(data[0].checkingBal);
         $("#savingsNum").text(data[0].savingsNum);
         $("#savingsBal").text(data[0].savingsBal);
-        for(let i = 0; i < data[1].length; i++) {
+        transDate.each(function(index) {
+          let elemData = data[1][index].transactionDate;
+          $(this).text(elemData);
+        });
+        transAmt.each(function(index) {
+          let elemData = data[1][index].transactionAmount;
+          $(this).text(elemData);
+        });
+        transPurc.each(function(index) {
+          let elemData = data[1][index].transactionPurchase;
+          $(this).text(elemData);
+        });
+        transCard.each(function(index) {
+          let elemData = data[1][index].transactionCard;
+          $(this).text(elemData);
+        });
+       // for(let i = 0; i < data[1].length; i++) {
           // let test = data[1][i].transactionDate
           // console.log(data[1][i].transactionDate);
-          transDate.text(data[1][i].transactionDate);
-        }
+        //   transDate.text(data[1][i].transactionDate);
+        // }
         // let test = userFName.text().toString();
         // console.log(test);
         
